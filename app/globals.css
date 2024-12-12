@@ -1,0 +1,33 @@
+/* app/styles/globals.css */
+body {
+  background-color: #181818  !important;/* Set background color to dark */
+  color: white !important; /* Set text color for contrast */
+  margin: 0;
+  font-family: Arial, sans-serif; /* Optional: Customize font */
+}
+
+
+/* global.css or a specific CSS file */
+.background-login {
+  position: relative; /* Establish a context for the pseudo-element */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Prevent content overflow */
+
+
+}
+
+.background-login::before {
+  content: ''; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url('../public/images/LoginPage.png');
+  background-size: cover; /* Ensure the image covers the whole area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  opacity: 0.2; /* Adjust for low opacity */
+  z-index: -1; /* Place it behind the content */
+}
